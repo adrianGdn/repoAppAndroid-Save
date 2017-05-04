@@ -1,3 +1,0 @@
-C:\Users\Adrian Gandon\Source\Workspaces\SuiviAA\suivAAndroid\suivAAndroid\suivAAndroid\obj\Debug\suivAAndroid.MainPage.xaml.g.cs
-C:\Users\Adrian Gandon\Source\Workspaces\SuiviAA\suivAAndroid\suivAAndroid\suivAAndroid\obj\Debug\suivAAndroid.App.xaml.g.cs
-C:\Users\Adrian Gandon\Source\Workspaces\SuiviAA\suivAAndroid\suivAAndroid\suivAAndroid\obj\Debug\suivAAndroid.Views.CreerVisite.xaml.g.cs
