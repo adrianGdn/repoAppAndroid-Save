@@ -35,7 +35,6 @@ namespace SuiviAA2.Model.SQLiteRepo
 
         public async Task AddNewVisiteAsync(int id,DateTime dateVisite,int estVisiteProgramme,string heureArriveeCabinet,string heureDebutEntretien,string heureDepartCabinet, int idMedecin,string idActeur)
         {
-            //ajouter méthode ajout visite
             int result = 0;
             try
             {
@@ -46,6 +45,12 @@ namespace SuiviAA2.Model.SQLiteRepo
             {
                 StatusMessage = string.Format("Impossible d'insérer une visite");
             }
+        }
+
+        public async Task<List<Visite>>GetAllVisitesAsync()
+        {
+            List<Visite> ListVisites = await dbConn.Table<Visite>().ToListAsync();
+            return ListVisites;
         }
     }
 }
