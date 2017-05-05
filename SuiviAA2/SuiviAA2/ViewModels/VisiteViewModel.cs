@@ -10,5 +10,6 @@ namespace SuiviAA2.ViewModels
     [ImplementPropertyChanged]
     public class VisiteViewModel
     {
+
     }
 }

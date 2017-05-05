@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace SuiviAA2.Model
 {
+    [Table("visite")]
     public class Visite
     {
         #region properties
+        
         private int id;
-        private DateTime date;
+        private DateTime dateVisite;
         private int estVisiteProgramme;
         private string heureArriveeCabinet;
         private string heureDebutEntretien;
@@ -19,13 +22,21 @@ namespace SuiviAA2.Model
         private string idActeur;
         #endregion
         #region get/set
+        [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get => id; set => id = value; }
-        public DateTime Date { get => date; set => date = value; }
+        [Column("dateVisite")]
+        public DateTime DateVisite { get => dateVisite; set => dateVisite = value; }
+        [Column("estVisiteProgramme")]
         public int EstVisiteProgramme { get => estVisiteProgramme; set => estVisiteProgramme = value; }
+        [Column("heureArriveeCabinet")]
         public string HeureArriveeCabinet { get => heureArriveeCabinet; set => heureArriveeCabinet = value; }
+        [Column("heureDebutEntretien")]
         public string HeureDebutEntretien { get => heureDebutEntretien; set => heureDebutEntretien = value; }
+        [Column("heureDepartCabinet")]
         public string HeureDepartCabinet { get => heureDepartCabinet; set => heureDepartCabinet = value; }
+        [Column("idMedecin")]
         public int IdMedecin { get => idMedecin; set => idMedecin = value; }
+        [Column("idActeur")]
         public string IdActeur { get => idActeur; set => idActeur = value; }
         #endregion
     }
