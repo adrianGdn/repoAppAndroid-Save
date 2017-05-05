@@ -33,9 +33,19 @@ namespace SuiviAA2.Model.SQLiteRepo
 
         }
 
-        public async Task AddNewVisiteAsync()
+        public async Task AddNewVisiteAsync(int id,DateTime dateVisite,int estVisiteProgramme,string heureArriveeCabinet,string heureDebutEntretien,string heureDepartCabinet, int idMedecin,string idActeur)
         {
             //ajouter méthode ajout visite
+            int result = 0;
+            try
+            {
+                //insert une visite dans la table visite
+                result = await dbConn.InsertAsync(new Visite { Id = id, DateVisite = dateVisite, EstVisiteProgramme = estVisiteProgramme, HeureArriveeCabinet = heureArriveeCabinet, HeureDebutEntretien = heureDebutEntretien, HeureDepartCabinet = heureDepartCabinet, IdMedecin = idMedecin, IdActeur = idActeur });
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = string.Format("Impossible d'insérer une visite");
+            }
         }
     }
 }
