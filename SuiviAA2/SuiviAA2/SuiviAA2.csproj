@@ -52,6 +52,8 @@
     <Compile Include="Model\Visite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClientCabinets.cs" />
+    <Compile Include="ViewModels\BaseVM.cs" />
+    <Compile Include="ViewModels\LoginVM.cs" />
     <Compile Include="ViewModels\VisiteVM.cs" />
     <Compile Include="Views\VisitePage.xaml.cs">
       <DependentUpon>VisitePage.xaml</DependentUpon>
@@ -119,6 +121,7 @@
     <Content Include="FodyWeavers.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Images\laboratoire.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\VisitePage.xaml">

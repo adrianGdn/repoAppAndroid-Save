@@ -30,7 +30,6 @@ namespace SuiviAA2.Model.SQLiteRepo
                 dbConn = new SQLiteAsyncConnection(connectionFunc);
                 dbConn.CreateTableAsync<Visite>(); //Crée la table visite
             }
-
         }
 
         public async Task AddNewVisiteAsync(int id,DateTime dateVisite,int estVisiteProgramme,string heureArriveeCabinet,string heureDebutEntretien,string heureDepartCabinet, int idMedecin,string idActeur)

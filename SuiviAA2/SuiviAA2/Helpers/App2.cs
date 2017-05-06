@@ -9,6 +9,6 @@ namespace SuiviAA2.Helpers
 {
     public class App2 : Application
     {
-        public static
+        //public static
     }
 }

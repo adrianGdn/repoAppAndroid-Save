@@ -1,7 +1,10 @@
-﻿using SQLite;
+﻿using Newtonsoft.Json;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -56,6 +59,28 @@ namespace SuiviAA2.Model
         public string QuestionSecrete { get => questionSecrete; set => questionSecrete = value; }
         [Column("version")]
         public int Version { get => version; set => version = value; }
+        #endregion
+
+        #region methods
+        //public async Task<Acteur> GetActeurAsync(string login,string pass)
+        //{
+        //    //url de récupération du json de l'acteur
+        //    string urlActeur = "http://10.0.0.5/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_visiteur.php" + "?" + "login=" + login +"&"+"pass="+pass;
+        //    //instanciation du nouvel objet acteur
+        //    Acteur unActeur = new Acteur();
+
+        //    //instanciation du client http qui envoi un header json
+        //    HttpClient clientActeur = new HttpClient();
+        //    clientActeur.DefaultRequestHeaders.Accept.Clear();
+        //    clientActeur.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+        //    //réponse à la requête Http
+        //    var response = await clientActeur.GetAsync("visiteur");
+        //    var jsonActeur = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+        //    unActeur = await Task.Run(() => JsonConvert.DeserializeObject<Acteur>(jsonActeur));
+            
+        //    return unActeur;
+        //}
         #endregion
     }
 }

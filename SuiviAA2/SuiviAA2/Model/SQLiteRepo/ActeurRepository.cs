@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuiviAA2.Model.SQLiteRepo
 {
-    class ActeurRepository
+    public class ActeurRepository
     {
     }
 }
