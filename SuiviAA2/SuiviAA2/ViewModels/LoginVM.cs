@@ -28,8 +28,6 @@ namespace SuiviAA2.ViewModels
         {
             // url de récupération du json de l'acteur
             string urlActeur = "http://10.0.0.5/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_visiteur.php" + "?" + "login=" + Login + "&" + "pass=" + Pass;
-            //instanciation du nouvel objet acteur
-            Acteur unActeur = new Acteur();
 
             //instanciation du client http qui envoi un header json
             HttpClient clientActeur = new HttpClient();
@@ -38,7 +36,8 @@ namespace SuiviAA2.ViewModels
 
             //réponse à la requête Http
             var response = await clientActeur.GetAsync(urlActeur);
-            var jsonActeur = JsonConvert.DeserializeObject(await response.Content.ReadAsStringAsync());
+            var json = response.Content.ReadAsStringAsync().Result;
+            var acteurJson = JsonConvert.DeserializeObject<ActeurJson>(json);
 
             App.Current.MainPage = new VisitePage();
         }
