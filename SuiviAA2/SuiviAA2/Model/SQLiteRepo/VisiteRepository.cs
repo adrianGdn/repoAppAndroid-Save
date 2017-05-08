@@ -40,7 +40,7 @@ namespace SuiviAA2.Model.SQLiteRepo
                 //insert une visite dans la table visite
                 result = await dbConn.InsertAsync(new Visite { Id = id, DateVisite = dateVisite, EstVisiteProgramme = estVisiteProgramme, HeureArriveeCabinet = heureArriveeCabinet, HeureDebutEntretien = heureDebutEntretien, HeureDepartCabinet = heureDepartCabinet, IdMedecin = idMedecin, IdActeur = idActeur });
             }
-            catch (Exception ex)
+            catch
             {
                 StatusMessage = string.Format("Impossible d'insérer une visite");
             }

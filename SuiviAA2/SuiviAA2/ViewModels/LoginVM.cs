@@ -18,13 +18,12 @@ namespace SuiviAA2.ViewModels
     public class LoginVM
     {
         #region properties
-        private string login;
-        private string pass;
+        public static string login;
+        public static string pass;
         #endregion
         #region get/set
         public string Login { get => login; set => login = value; } // Recupère automatiquement la valeur du champ ent_login de la mainpage
         public string Pass { get => pass; set => pass = value; } // Recupère automatiquement la valeur du champ ent_mdp de la mainpage
-        public string shAmdp;
         #endregion
         #region methods
         public async Task Connexion()

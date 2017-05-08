@@ -4,25 +4,26 @@
              x:Class="SuiviAA2.Views.VisitePage">
 
     <StackLayout VerticalOptions="CenterAndExpand">
-        <Label Text="Cabinet"></Label>
-        <Picker></Picker>
-        <Label Text="Medecin"></Label>
-        <Picker></Picker>
-        <Label Text="Date"></Label>
-        <DatePicker></DatePicker>
-        <StackLayout HorizontalOptions="FillAndExpand"
-                     Orientation="Horizontal">
-            <Label Text="Sur rendez-vous?"></Label>
-            <Switch></Switch>
-        </StackLayout>
-        <Label Text="Heure d'arrivée"></Label>
-        <TimePicker></TimePicker>
-        <Label Text="Heure début"></Label>
-        <TimePicker></TimePicker>
-        <Label Text="Heure depart"></Label>
-        <TimePicker></TimePicker>
-        <Button Text="Valider"></Button>
-
+        <ScrollView>
+            <Label Text="Cabinet"></Label>
+            <Picker></Picker>
+            <Label Text="Medecin"></Label>
+            <Picker></Picker>
+            <Label Text="Date"></Label>
+            <DatePicker></DatePicker>
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         Orientation="Horizontal">
+                <Label Text="Sur rendez-vous?"></Label>
+                <Switch></Switch>
+            </StackLayout>
+            <Label Text="Heure d'arrivée"></Label>
+            <TimePicker></TimePicker>
+            <Label Text="Heure début"></Label>
+            <TimePicker></TimePicker>
+            <Label Text="Heure depart"></Label>
+            <TimePicker></TimePicker>
+            <Button Text="Valider"></Button>
+        </ScrollView>
     </StackLayout>
-    
+
 </ContentPage>

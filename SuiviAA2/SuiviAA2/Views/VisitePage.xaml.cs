@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SuiviAA2.Model;
+using SuiviAA2.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,7 @@ namespace SuiviAA2.Views
         public VisitePage()
         {
             InitializeComponent();
+            BindingContext = new VisiteVM();
         }
     }
 }

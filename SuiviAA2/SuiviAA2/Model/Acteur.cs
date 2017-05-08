@@ -114,6 +114,23 @@ namespace SuiviAA2.Model
         public string questionSecrete { get; set; }
         [JsonProperty("version")]
         public string version { get; set; }
+
+        #region methods
+
+        //public void insertActeurInDB(string dbPath)
+        //{
+        //    using (var db = new SQLiteConnection(dbPath))
+        //    {
+        //        db.RunInTransaction(() =>
+        //        {
+        //            foreach (var item in items)
+        //            {
+        //                db.Insert(item);
+        //            }
+        //        });
+        //    }
+        //}
+        #endregion
     }
 
     public class ActeurJson
@@ -121,4 +138,6 @@ namespace SuiviAA2.Model
         [JsonProperty("Acteur")]
         public Acteur Acteur { get; set; }
     }
+
+    
 }
