@@ -39,7 +39,7 @@ namespace SuiviAA2.ViewModels
                 //instanciation du client http qui envoi un header json
                 HttpClientService clientActeur = new HttpClientService();
 
-                //réponse à la requête Http
+                //désérialisation dans un obj acteur json
                 var acteurJson = JsonConvert.DeserializeObject<ActeurJson>(await clientActeur.loadActeur(Login,Pass));
 
                 //on vérifie les informations de connexion du user (ici cela se ait avec oldMdp car pas d'implémentation du SHA1 actuellement en Xamarin, auquel cas nous aurions converti le contenu du champ pass en sha1 puis vérification avec le champ mdp de l'acteur)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuiviAA2.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace SuiviAA2.JsonModel
 {
     public class VisiteJson
     {
+        public List<Visite> visite { get; set; }
     }
 }
