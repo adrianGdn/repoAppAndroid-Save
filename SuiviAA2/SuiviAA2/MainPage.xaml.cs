@@ -20,10 +20,5 @@ namespace SuiviAA2
             InitializeComponent();
             BindingContext = new LoginVM();
         }
-
-        private void btn_Connexion_Clicked(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

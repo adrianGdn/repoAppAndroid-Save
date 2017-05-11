@@ -38,19 +38,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\FileAccessHelper.cs" />
+    <Compile Include="JsonModel\ActeurJson.cs" />
+    <Compile Include="JsonModel\CabinetJson.cs" />
+    <Compile Include="JsonModel\MedecinJson.cs" />
+    <Compile Include="JsonModel\VisiteJson.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Acteur.cs" />
     <Compile Include="Model\Cabinet.cs" />
     <Compile Include="Model\Medecin.cs" />
-    <Compile Include="Model\SQLiteRepo\ActeurRepository.cs" />
-    <Compile Include="Model\SQLiteRepo\CabinetRepository.cs" />
-    <Compile Include="Model\SQLiteRepo\MedecinRepository.cs" />
-    <Compile Include="Model\SQLiteRepo\VisiteRepository.cs" />
     <Compile Include="Model\Visite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ClientCabinets.cs" />
+    <Compile Include="Services\HttpClientService.cs" />
     <Compile Include="ViewModels\BaseVM.cs" />
     <Compile Include="ViewModels\LoginVM.cs" />
     <Compile Include="ViewModels\VisiteVM.cs" />
@@ -128,9 +129,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

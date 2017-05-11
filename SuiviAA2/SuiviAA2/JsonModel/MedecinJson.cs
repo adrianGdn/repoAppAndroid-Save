@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuiviAA2.Model.SQLiteRepo
+namespace SuiviAA2.JsonModel
 {
-    public class MedecinRepository
+    public class MedecinJson
     {
     }
 }

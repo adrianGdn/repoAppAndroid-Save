@@ -12,6 +12,8 @@ using System.Windows.Input;
 using static SuiviAA2.ViewModels.BaseVM;
 using System.Security;
 using System.Diagnostics;
+using SuiviAA2.JsonModel;
+using SuiviAA2.Services;
 
 namespace SuiviAA2.ViewModels
 {
@@ -35,16 +37,12 @@ namespace SuiviAA2.ViewModels
                 string urlActeur = "http://10.0.0.5/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_visiteur.php" + "?" + "login=" + Login + "&" + "pass=" + Pass;
 
                 //instanciation du client http qui envoi un header json
-                HttpClient clientActeur = new HttpClient();
-                clientActeur.DefaultRequestHeaders.Accept.Clear();
-                clientActeur.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpClientService clientActeur = new HttpClientService();
 
                 //réponse à la requête Http
-                var response = await clientActeur.GetAsync(urlActeur);
-                var json = response.Content.ReadAsStringAsync().Result;
-                var acteurJson = JsonConvert.DeserializeObject<ActeurJson>(json);
+                var acteurJson = JsonConvert.DeserializeObject<ActeurJson>(await clientActeur.loadActeur(Login,Pass));
 
-                //on vérifie les informations de connexion du user (ici cela se ait avec oldMdp car pas d'implémentation du SHA1 actuellement en Xamarin, auquel cas nous auions converti le contenu du champ pass en sha1 puis vérification avec le champ mdp de l'acteur)
+                //on vérifie les informations de connexion du user (ici cela se ait avec oldMdp car pas d'implémentation du SHA1 actuellement en Xamarin, auquel cas nous aurions converti le contenu du champ pass en sha1 puis vérification avec le champ mdp de l'acteur)
                 if (acteurJson.Acteur.login == login && acteurJson.Acteur.oldMdp == pass)
                 {
                     App.Current.MainPage = new VisitePage();

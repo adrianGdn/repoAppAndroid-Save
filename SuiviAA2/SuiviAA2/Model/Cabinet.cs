@@ -21,8 +21,6 @@ namespace SuiviAA2.Model
         private string cp;
         private string ville;
         private string rue;
-        //Définit le lien de récupération du json des cabinets
-        private const string ApiBaseAdress = "http://ppe3JoJuAd/gsbAppliFraisV2/webservices/w_cabinet.php";
         #endregion
         #region get/set
         [PrimaryKey, AutoIncrement, Column("id")]
@@ -76,24 +74,5 @@ namespace SuiviAA2.Model
         #endregion
     }
 
-    public class CabinetsList
-    {
-        public List<Cabinet> cabinets { get; set; }
-
-
-        public string adresseCabinets = "http://ppe3JoJuAd/gsbAppliFraisV2/webservices/w_cabinet.php";
-        public static string userId;
-        #region methods
-        public CabinetsList listeCabinets = new CabinetsList();
-        public async Task<CabinetsList> loadCabinets()
-        {
-            HttpClient clientCabinets = new HttpClient();
-            var response = await clientCabinets.GetAsync(adresseCabinets);
-            var json = await response.Content.ReadAsStringAsync();
-            listeCabinets = JsonConvert.DeserializeObject<CabinetsList>(json);
-
-            return listeCabinets;
-        }
-        #endregion
-    }
+    
 }

@@ -1,4 +1,5 @@
-﻿using SuiviAA2.Model;
+﻿using SuiviAA2.JsonModel;
+using SuiviAA2.Model;
 using SuiviAA2.ViewModels;
 using System;
 using System.Collections.Generic;

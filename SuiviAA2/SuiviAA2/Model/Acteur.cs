@@ -117,27 +117,10 @@ namespace SuiviAA2.Model
 
         #region methods
 
-        //public void insertActeurInDB(string dbPath)
-        //{
-        //    using (var db = new SQLiteConnection(dbPath))
-        //    {
-        //        db.RunInTransaction(() =>
-        //        {
-        //            foreach (var item in items)
-        //            {
-        //                db.Insert(item);
-        //            }
-        //        });
-        //    }
-        //}
         #endregion
     }
 
-    public class ActeurJson
-    {
-        [JsonProperty("Acteur")]
-        public Acteur Acteur { get; set; }
-    }
+    
 
     
 }
