@@ -36,10 +36,10 @@ namespace SuiviAA.ViewModels
                 //désérialisation dans un obj acteur json
                 
                 acteurJson = JsonConvert.DeserializeObject<ActeurJson>(await clientActeur.loadActeur(Login, Pass));
-                Passerelle.setUserId(acteurJson.Acteur.id);
-                Passerelle.loadListCabinet();
-                Passerelle.loadListVisite();
-                Passerelle.loadListMedecin();
+                //Passerelle.setUserId(acteurJson.Acteur.id);
+                //Passerelle.loadListCabinet();
+                //Passerelle.loadListVisite();
+                //Passerelle.loadListMedecin();
 
                 //on vérifie les informations de connexion du user (ici cela se ait avec oldMdp car pas d'implémentation du SHA1 actuellement en Xamarin, auquel cas nous aurions converti le contenu du champ pass en sha1 puis vérification avec le champ mdp de l'acteur)
                 if (acteurJson.Acteur.login == login && acteurJson.Acteur.oldMdp == pass)

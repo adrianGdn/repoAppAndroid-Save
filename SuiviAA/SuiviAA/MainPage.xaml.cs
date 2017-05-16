@@ -13,7 +13,7 @@ namespace SuiviAA
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new LoginVM();
+            //BindingContext = new LoginVM();
         }
     }
 }
