@@ -32,7 +32,7 @@ namespace SuiviAA.Services
         /// <returns></returns>
         public async Task<string> loadActeur(string login, string mdp)
         {
-            string urlActeur = "http://172.16.8.38/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_visiteur.php" + "?" + "login=" + login + "&" + "pass=" + mdp;
+            string urlActeur = "http://172.16.8.22/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_visiteur.php" + "?" + "login=" + login + "&" + "pass=" + mdp;
             var response = await clientHttp.GetAsync(urlActeur);
             var json = response.Content.ReadAsStringAsync().Result;
             return json;
@@ -46,7 +46,7 @@ namespace SuiviAA.Services
         /// <returns></returns>
         public async Task<string> loadCabinets(string userId)
         {
-            string urlCabinet = "http://172.16.8.38/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_cabinet.php" + "?" + "user=" + userId;
+            string urlCabinet = "http://172.16.8.22/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_cabinet.php" + "?" + "user=" + userId;
             var response = await clientHttp.GetAsync(urlCabinet);
             var json = response.Content.ReadAsStringAsync().Result;
             return json;
@@ -60,7 +60,7 @@ namespace SuiviAA.Services
         /// <returns></returns>
         public async Task<string> loadVisites(string userId)
         {
-            string urlVisite = "http://172.16.8.38/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_visite.php" + "?" + "user=" + userId;
+            string urlVisite = "http://172.16.8.22/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_visite.php" + "?" + "user=" + userId;
             var response = await clientHttp.GetAsync(urlVisite);
             var json = response.Content.ReadAsStringAsync().Result;
             return json;
@@ -74,7 +74,7 @@ namespace SuiviAA.Services
         /// <returns></returns>
         public async Task<string> loadMedecin(string userId)
         {
-            string urlMedecin = "http://172.16.8.38/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_medecin.php" + "?" + "user=" + userId;
+            string urlMedecin = "http://172.16.8.22/ppe3JoJuAd/gsbAppliFraisV2/webservices/w_medecin.php" + "?" + "user=" + userId;
             var response = await clientHttp.GetAsync(urlMedecin);
             var json = response.Content.ReadAsStringAsync().Result;
             return json;
